@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeySpriteMaterial : MonoBehaviour
+public class UpdateKeySprite : MonoBehaviour
 {
     public int keyPosition;
     new SpriteRenderer renderer;
@@ -11,11 +11,22 @@ public class KeySpriteMaterial : MonoBehaviour
     void Start()
     {
         renderer = GetComponent<SpriteRenderer>();
-        KeyBunch.Instance.onKeySwitch.AddListener(UpdateMaterial);
+        KeyBunch.Instance.onKeySwitch.AddListener(OnKeySwitch);
+    }
+
+    void OnKeySwitch()
+    {
+        UpdateMaterial();
+        UpdateSprite();
     }
 
     void UpdateMaterial()
     {
         renderer.material = KeyBunch.Instance.GetKeyAtPosition(keyPosition).Mat;
+    }
+
+    void UpdateSprite()
+    {
+        renderer.sprite = KeyBunch.Instance.GetKeyAtPosition(keyPosition).Sprite;
     }
 }

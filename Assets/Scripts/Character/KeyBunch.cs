@@ -11,6 +11,7 @@ public class KeyBunch : MonoBehaviour
     public UnityEvent onKeySwitch = new UnityEvent();
 
     PlayerInputs inputs;
+    Animator anim;
     CharacterMovementController movementController;
 
     public static KeyBunch Instance;
@@ -24,6 +25,7 @@ public class KeyBunch : MonoBehaviour
     void Start()
     {
         movementController = GetComponentInParent<CharacterMovementController>();
+        anim = movementController.GetComponentInChildren<Animator>();
         inputs = GetComponentInParent<PlayerInputs>();
         inputs.onSwitchUpButton.AddListener(OnSwitchUpButton);
         inputs.onSwitchDownButton.AddListener(OnSwitchDownButton);
@@ -65,6 +67,8 @@ public class KeyBunch : MonoBehaviour
 
         SelectKey(keys[selectedKey]);
         onKeySwitch.Invoke();
+
+        anim.SetTrigger("Switch");
     }
 
     public void SelectKey(Key key)
