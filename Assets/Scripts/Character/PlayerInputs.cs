@@ -18,10 +18,12 @@ public class PlayerInputs : MonoBehaviour
     public UnityEvent onSwitchUpButton = new UnityEvent();
     public UnityEvent onSwitchDownButton = new UnityEvent();
 
+    public static PlayerInputs Instance;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        Instance = this;
     }
 
     // Update is called once per frame

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class KeyBunch : MonoBehaviour
+public class KeyBunch : BunchBase
 {
-    public List<Key> keys = new List<Key>();
-    int selectedKey = 0;
+    [Header("Player Bunch")]
+
+    [HideInInspector] public WallBunch contactWallBunch = null;
 
     public UnityEvent onKeySwitch = new UnityEvent();
 
@@ -15,6 +16,8 @@ public class KeyBunch : MonoBehaviour
     CharacterMovementController movementController;
 
     public static KeyBunch Instance;
+
+    public int CurrentKeyLength { get => keys[selectedKey].length; }
 
     private void Awake()
     {
@@ -57,8 +60,23 @@ public class KeyBunch : MonoBehaviour
         if (keys.Count < 2)
             return;
 
-        //Change id
-        selectedKey += dir;
+        //If in contact with a wallBunch, leave the ex-selected key there
+        if (contactWallBunch != null && contactWallBunch.keys.Count<WallBunch.MAX_KEYS)
+        {
+            //Add the key to the wallbunch
+            contactWallBunch.AddKey(keys[selectedKey]);
+
+            keys.RemoveAt(selectedKey);
+
+            //Only change id if going back, since otherwise the id is now the one of the next key
+            if (dir < 0 && keys.Count>1)
+                selectedKey--;
+        }
+        else
+        {
+            //Change id
+            selectedKey += dir;
+        }
 
         //Loop ids
         if (selectedKey < 0)
@@ -67,6 +85,7 @@ public class KeyBunch : MonoBehaviour
 
         SelectKey(keys[selectedKey]);
         onKeySwitch.Invoke();
+        onBunchUpdate.Invoke();
 
         anim.SetTrigger("Switch");
     }
@@ -75,13 +94,5 @@ public class KeyBunch : MonoBehaviour
     {
         movementController.moveSpeed = key.MoveSpeed;
         movementController.jumpHeight = key.JumpHeight;
-    }
-
-    public Key GetKeyAtPosition(int keyPosition)
-    {
-        int id = selectedKey + keyPosition;
-        id %= keys.Count;
-
-        return keys[id];
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UpdateKeySprite : MonoBehaviour
 {
+    public BunchBase bunch;
     public int keyPosition;
     new SpriteRenderer renderer;
 
@@ -11,10 +12,11 @@ public class UpdateKeySprite : MonoBehaviour
     void Start()
     {
         renderer = GetComponent<SpriteRenderer>();
-        KeyBunch.Instance.onKeySwitch.AddListener(OnKeySwitch);
+        bunch.onBunchUpdate.AddListener(OnBunchUpdate);
+        OnBunchUpdate();
     }
 
-    void OnKeySwitch()
+    void OnBunchUpdate()
     {
         UpdateMaterial();
         UpdateSprite();
@@ -22,11 +24,15 @@ public class UpdateKeySprite : MonoBehaviour
 
     void UpdateMaterial()
     {
-        renderer.material = KeyBunch.Instance.GetKeyAtPosition(keyPosition).Mat;
+        Key key = bunch.GetKeyAtPosition(keyPosition);
+        if(key!=null)
+            renderer.material = key.Mat;
     }
 
     void UpdateSprite()
     {
-        renderer.sprite = KeyBunch.Instance.GetKeyAtPosition(keyPosition).Sprite;
+        Key key = bunch.GetKeyAtPosition(keyPosition);
+        if (key != null)
+            renderer.sprite = key.Sprite;
     }
 }

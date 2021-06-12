@@ -120,7 +120,10 @@ public class MapBuilder : MonoBehaviour
         newCell.transform.position = new Vector3(coords.x, coords.y);
         newCell.layer = MAP_LAYER;
         newCell.GetComponent<BoxCollider2D>().size = Vector2.one * cellSize;
-        return newCell.GetComponent<SpriteRenderer>();
+
+        SpriteRenderer renderer = newCell.GetComponent<SpriteRenderer>();
+        renderer.sortingLayerName = "MapBack";
+        return renderer;
     }
 
     SpriteRenderer GetRendererAtMousePos()
