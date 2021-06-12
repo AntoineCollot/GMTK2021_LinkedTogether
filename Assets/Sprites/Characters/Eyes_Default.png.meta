@@ -1,28 +1,22 @@
 fileFormatVersion: 2
-guid: c2aec56c4dc29d54ebeeb87b359a4f0b
+guid: 6c9e0685517e8c040bde36f2ca1bea70
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5141760670510271424
-    second: Eyes_0
+      213: -4551268719818153838
+    second: Eyes_Default_0
   - first:
-      213: -4077014396740012951
-    second: Eyes_1
+      213: -5557077467017152235
+    second: Eyes_Default_1
   - first:
-      213: -3376063698537044272
-    second: Eyes_2
+      213: 2153746583756052537
+    second: Eyes_Default_2
   - first:
-      213: -5550155211335367034
-    second: Eyes_3
+      213: 4596174074730804075
+    second: Eyes_Default_3
   - first:
-      213: 2510935616260235399
-    second: Eyes_4
-  - first:
-      213: 5708961479443090928
-    second: Eyes_5
-  - first:
-      213: 4729202038203089788
-    second: Eyes_Empty
+      213: 6442536414163095425
+    second: Eyes_Default_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -69,7 +63,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -146,43 +140,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Eyes_0
+      name: Eyes_Default_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 27
-        width: 3
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 0
+        y: 0
+        width: 4
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cbc6dd66143b5740800000000000000
-      internalID: 5141760670510271424
+      spriteID: 29064e58635a6d0c0800000000000000
+      internalID: -4551268719818153838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Eyes_1
+      name: Eyes_Default_1
       rect:
         serializedVersion: 2
-        x: 6
-        y: 27
-        width: 3
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 4
+        y: 0
+        width: 4
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9647822d1098b67c0800000000000000
-      internalID: -4077014396740012951
+      spriteID: 5197d158c7b41e2b0800000000000000
+      internalID: -5557077467017152235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes_Default_2
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 4
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9389dfc5b15a3ed10800000000000000
+      internalID: 2153746583756052537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes_Default_3
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 4
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63703a28f3e8cf30800000000000000
+      internalID: 4596174074730804075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes_Default_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 4
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18fc5b21cbc786950800000000000000
+      internalID: 6442536414163095425
       vertices: []
       indices: 
       edges: []

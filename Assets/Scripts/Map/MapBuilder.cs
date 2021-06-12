@@ -8,6 +8,11 @@ public class MapBuilder : MonoBehaviour
     const int MAP_LAYER = 8;
     public LayerMask mapMask = 1 << MAP_LAYER;
 
+    public WallBunch wallBunchPrefab;
+    public Transform wallBunchParent;
+    public Door doorPrefab;
+    public Transform doorParent;
+
     Camera cam;
 
     [Header("Blocks")]
@@ -34,9 +39,9 @@ public class MapBuilder : MonoBehaviour
         //Delete
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Delete))
         {
-            SpriteRenderer renderer = GetRendererAtMousePos();
-            if (renderer != null)
-                DestroyCell(renderer.gameObject);
+            GameObject obj = GetObjectAtMousePos();
+            if (obj != null)
+                DestroyCell(obj);
         }
 
         //Rotate
@@ -47,6 +52,22 @@ public class MapBuilder : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             RotateCell(1);
+        }
+        //Inverse
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            InverseCell();
+        }
+
+        //Prefabs
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            CreateDoor();
+        }
+        //Prefabs
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            CreateWallBunch();
         }
     }
 
@@ -60,6 +81,17 @@ public class MapBuilder : MonoBehaviour
             renderer.transform.Rotate(Vector3.forward * -90);
         else
             renderer.transform.Rotate(Vector3.forward * 90);
+    }
+
+    void InverseCell()
+    {
+        GameObject obj = GetObjectAtMousePos();
+        if (obj == null)
+            return;
+
+        Vector3 scale = obj.transform.localScale;
+        scale.x *= -1;
+        obj.transform.localScale = scale;
     }
 
     void WanderBlock(int dir)
@@ -124,6 +156,27 @@ public class MapBuilder : MonoBehaviour
         SpriteRenderer renderer = newCell.GetComponent<SpriteRenderer>();
         renderer.sortingLayerName = "MapBack";
         return renderer;
+    }
+
+    void CreateDoor()
+    {
+        Vector2Int coords = GetMouseCoords();
+        Instantiate(doorPrefab, new Vector3(coords.x, coords.y), Quaternion.identity, doorParent);
+    }
+
+    void CreateWallBunch()
+    {
+        Vector2Int coords = GetMouseCoords();
+        Instantiate(wallBunchPrefab, new Vector3(coords.x, coords.y), Quaternion.identity, wallBunchParent);
+    }
+
+    GameObject GetObjectAtMousePos()
+    {
+        Collider2D hitCollider = Physics2D.OverlapPoint(GetMouseCoords());
+        if (hitCollider == null)
+            return null;
+
+        return hitCollider.gameObject;
     }
 
     SpriteRenderer GetRendererAtMousePos()

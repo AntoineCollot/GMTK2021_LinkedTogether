@@ -12,7 +12,7 @@ public class UpdateKeySprite : MonoBehaviour
     void Start()
     {
         renderer = GetComponent<SpriteRenderer>();
-        bunch.onBunchUpdate.AddListener(OnBunchUpdate);
+        bunch.onBunchUpdated.AddListener(OnBunchUpdate);
         OnBunchUpdate();
     }
 

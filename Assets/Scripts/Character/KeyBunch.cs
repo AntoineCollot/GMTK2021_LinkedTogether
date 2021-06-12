@@ -18,6 +18,8 @@ public class KeyBunch : BunchBase
     public static KeyBunch Instance;
 
     public int CurrentKeyLength { get => keys[selectedKey].length; }
+    public Key CurrentKey { get => keys[selectedKey]; }
+    public int KeyCountInBunch { get => keys.Count - 1; }
 
     private void Awake()
     {
@@ -83,16 +85,9 @@ public class KeyBunch : BunchBase
             selectedKey = keys.Count - 1;
         selectedKey %= keys.Count;
 
-        SelectKey(keys[selectedKey]);
         onKeySwitch.Invoke();
-        onBunchUpdate.Invoke();
+        onBunchUpdated.Invoke();
 
         anim.SetTrigger("Switch");
-    }
-
-    public void SelectKey(Key key)
-    {
-        movementController.moveSpeed = key.MoveSpeed;
-        movementController.jumpHeight = key.JumpHeight;
     }
 }

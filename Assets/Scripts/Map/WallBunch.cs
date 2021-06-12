@@ -60,6 +60,6 @@ public class WallBunch : BunchBase
         KeyBunch.Instance.AddKeys(keys);
         keys.Clear();
 
-        onBunchUpdate.Invoke();
+        onBunchUpdated.Invoke();
     }
 }

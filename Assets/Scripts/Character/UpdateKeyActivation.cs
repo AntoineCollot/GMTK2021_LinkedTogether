@@ -10,7 +10,7 @@ public class UpdateKeyActivation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bunch.onBunchUpdate.AddListener(OnBunchUpdate);
+        bunch.onBunchUpdated.AddListener(OnBunchUpdate);
         OnBunchUpdate();
     }
 
