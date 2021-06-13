@@ -62,6 +62,6 @@ public class WallBunch : BunchBase
 
         onBunchUpdated.Invoke();
 
-        AudioManager.PlaySound(2);
+        AudioManager.PlaySound(1);
     }
 }

@@ -51,7 +51,7 @@ public class Door : MonoBehaviour
             return;
         }
 
-        AudioManager.PlaySound(5);
+        AudioManager.PlaySound(4);
         anim.SetTrigger("Open");
         GetComponent<Collider2D>().enabled = false;
     }

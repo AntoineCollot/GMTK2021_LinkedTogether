@@ -93,6 +93,6 @@ public class KeyBunch : BunchBase
         onBunchUpdated.Invoke();
 
         anim.SetTrigger("Switch");
-        AudioManager.PlaySound(3);
+        AudioManager.PlaySound(2);
     }
 }

@@ -251,7 +251,7 @@ public class CharacterMovementController : MonoBehaviour
 
     public void ForceJump()
     {
-        AudioManager.PlaySound(1);
+        AudioManager.PlaySound(0);
 
         anim.SetTrigger("Jump");
 

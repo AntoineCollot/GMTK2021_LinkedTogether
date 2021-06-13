@@ -9,7 +9,10 @@ public class HeartDoor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player") && KeyBunch.Instance.HasHeartKey)
+        if (collision.gameObject.CompareTag("Player") && KeyBunch.Instance.HasHeartKey)
+        {
             onWin.Invoke();
+            GameObject.FindGameObjectWithTag("End").GetComponent<Canvas>().enabled = true;
+        }
     }
 }

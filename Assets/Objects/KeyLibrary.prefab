@@ -59,7 +59,7 @@ MonoBehaviour:
   - material: 1
     properties:
       moveSpeed: 2
-      jumpHeight: 1.1
+      jumpHeight: 1.6
       fullTimeToJumpApex: 0.5
       halfTimeToJumpApex: 0.5
       fallingGravityMult: 2
