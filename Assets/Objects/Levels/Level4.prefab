@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7535216934688988730}
   - component: {fileID: 2190305124785619517}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3185,7 +3185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 849129619103419305}
   - component: {fileID: 2908013491963336699}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5167,13 +5167,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727452319888862398}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 9, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5206190067416145469}
   m_RootOrder: 82
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &9035658890432256877
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5214,7 +5214,7 @@ SpriteRenderer:
   m_SortingLayerID: 495073333
   m_SortingLayer: 2
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 105f1d549c2794f4082f9ed6949e05d6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5f9d1c89b8143f24f88f6b309cd74a83, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6407,7 +6407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5063859275852241528}
   - component: {fileID: 4568940240381034850}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8429,7 +8429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 243138126077905778}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8910,7 +8910,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1228038485237339905}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12768,7 +12768,7 @@ GameObject:
   - component: {fileID: 894326100894442194}
   - component: {fileID: 8158785504296482041}
   - component: {fileID: 2903057633399650497}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12809,6 +12809,9 @@ MonoBehaviour:
       m_Calls: []
   idleMat: {fileID: 2100000, guid: ce53feb2e6233a042b1eec87654ac1f5, type: 2}
   highlightMat: {fileID: 2100000, guid: bb2f34dd576124b43bbb23c078e6bdae, type: 2}
+  bunchRenderers:
+  - {fileID: 2190305124785619517}
+  - {fileID: 4905161002485206468}
 --- !u!50 &8158785504296482041
 Rigidbody2D:
   serializedVersion: 4
@@ -14604,6 +14607,10 @@ MonoBehaviour:
   - {fileID: 5775549647511798389, guid: 4f30b561cdf961848a6bc0087f668cad, type: 3}
   - {fileID: 5829366124417739753, guid: 954412f430e41da429f8a5e491432d14, type: 3}
   doorParent: {fileID: 5206190065924049683}
+  leverBunchPrefab: {fileID: 0}
+  otherParent: {fileID: 0}
+  obstaclePrefab: {fileID: 0}
+  furniturePrefab: {fileID: 0}
   blockLibrary:
   - {fileID: 21300000, guid: 5f9d1c89b8143f24f88f6b309cd74a83, type: 3}
   - {fileID: 21300000, guid: 08fa00e3dd52c3e43be83d38c269195c, type: 3}
@@ -14747,7 +14754,7 @@ GameObject:
   m_Component:
   - component: {fileID: 736579602766471287}
   - component: {fileID: 8539478639862589423}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18225,7 +18232,7 @@ GameObject:
   - component: {fileID: 2761601776263321898}
   - component: {fileID: 5708617778240672186}
   - component: {fileID: 1269645743268503811}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18267,6 +18274,9 @@ MonoBehaviour:
       m_Calls: []
   idleMat: {fileID: 2100000, guid: ce53feb2e6233a042b1eec87654ac1f5, type: 2}
   highlightMat: {fileID: 2100000, guid: bb2f34dd576124b43bbb23c078e6bdae, type: 2}
+  bunchRenderers:
+  - {fileID: 4568940240381034850}
+  - {fileID: 2908013491963336699}
 --- !u!50 &5708617778240672186
 Rigidbody2D:
   serializedVersion: 4
@@ -20434,7 +20444,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6208376054006371061}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21691,7 +21701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4594541123634344961}
   - component: {fileID: 4905161002485206468}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21884,7 +21894,7 @@ GameObject:
   - component: {fileID: 8187720236733571909}
   - component: {fileID: 7109741387350263839}
   - component: {fileID: 1851723056530550327}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21926,6 +21936,9 @@ MonoBehaviour:
       m_Calls: []
   idleMat: {fileID: 2100000, guid: ce53feb2e6233a042b1eec87654ac1f5, type: 2}
   highlightMat: {fileID: 2100000, guid: bb2f34dd576124b43bbb23c078e6bdae, type: 2}
+  bunchRenderers:
+  - {fileID: 8539478639862589423}
+  - {fileID: 3803026715769942585}
 --- !u!50 &7109741387350263839
 Rigidbody2D:
   serializedVersion: 4
@@ -22546,13 +22559,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8673032851335811553}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 9, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5206190067416145469}
   m_RootOrder: 76
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &760124857954085934
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22593,7 +22606,7 @@ SpriteRenderer:
   m_SortingLayerID: 495073333
   m_SortingLayer: 2
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 105f1d549c2794f4082f9ed6949e05d6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5f9d1c89b8143f24f88f6b309cd74a83, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -23513,7 +23526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1614606696874890689}
   - component: {fileID: 3803026715769942585}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch B
   m_TagString: Untagged
   m_Icon: {fileID: 0}

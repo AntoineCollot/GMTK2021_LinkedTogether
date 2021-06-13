@@ -621,7 +621,7 @@ GameObject:
   - component: {fileID: 3185864782074776221}
   - component: {fileID: 3185864782074776220}
   - component: {fileID: 3185864782074776219}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,6 +662,9 @@ MonoBehaviour:
       m_Calls: []
   idleMat: {fileID: 2100000, guid: ce53feb2e6233a042b1eec87654ac1f5, type: 2}
   highlightMat: {fileID: 2100000, guid: bb2f34dd576124b43bbb23c078e6bdae, type: 2}
+  bunchRenderers:
+  - {fileID: 3185864782738010324}
+  - {fileID: 3185864782458016216}
 --- !u!50 &3185864782074776220
 Rigidbody2D:
   serializedVersion: 4
@@ -931,7 +934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3185864782458016215}
   - component: {fileID: 3185864782458016216}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1012,7 +1015,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3185864782551102777}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1155,7 +1158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3185864782738010323}
   - component: {fileID: 3185864782738010324}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch F
   m_TagString: Untagged
   m_Icon: {fileID: 0}

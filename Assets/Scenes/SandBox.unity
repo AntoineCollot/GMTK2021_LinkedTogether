@@ -552,8 +552,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keys:
   - {fileID: 11400000, guid: 239d618fe659d5a4cae84ae1fbbaf348, type: 2}
-  - {fileID: 11400000, guid: 293898a8acfe0ef45b3ac9738dee86fa, type: 2}
-  - {fileID: 11400000, guid: 848ac93720f8cee4f830806156e6ebcb, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   onBunchUpdated:
     m_PersistentCalls:
       m_Calls: []
@@ -928,6 +928,15 @@ MonoBehaviour:
   mapMask:
     serializedVersion: 2
     m_Bits: 256
+  cellParent: {fileID: 0}
+  wallBunchPrefab: {fileID: 0}
+  wallBunchParent: {fileID: 0}
+  doorPrefabs: []
+  doorParent: {fileID: 0}
+  leverBunchPrefab: {fileID: 0}
+  otherParent: {fileID: 0}
+  obstaclePrefab: {fileID: 0}
+  furniturePrefab: {fileID: 0}
   blockLibrary:
   - {fileID: 21300000, guid: 5f9d1c89b8143f24f88f6b309cd74a83, type: 3}
   - {fileID: 21300000, guid: 08fa00e3dd52c3e43be83d38c269195c, type: 3}
@@ -1299,6 +1308,7 @@ MonoBehaviour:
   position1: {x: -0.0308, y: 0.365}
   position2: {x: -0.0308, y: 0.524}
   position3: {x: -0.0308, y: 0.6146}
+  positionHeart: {x: 0, y: 0}
 --- !u!1 &997830300
 GameObject:
   m_ObjectHideFlags: 0
@@ -2479,7 +2489,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e777d40ca0c6f489a0e35c2690b42d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementSpeedLossPerKey: 0.5
+  minMovementSpeed: 1
+  jumpHeightLossPerKey: 0.5
+  minJumpHeight: 1.1
   effortKeyCount: 3
+  bodyTransform: {fileID: 1685306696}
+  rotationSmooth: 0.1
+  maxEffortAngle: 25
+  maxEffortKey: 5
 --- !u!70 &1609944746
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2573,7 +2591,7 @@ MonoBehaviour:
   moveSpeed: 3
   groundMovementSmooth: 0.05
   airMovementSmooth: 0.3
-  jumpHeight: 3
+  jumpHeight: 3.1
   timeToJumpApex: 1
   shortHopGravityMultiplier: 1.5
   fallingGravityMultiplier: 2

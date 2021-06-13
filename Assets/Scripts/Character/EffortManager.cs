@@ -49,6 +49,17 @@ public class EffortManager : MonoBehaviour
         Key key = KeyBunch.Instance.CurrentKey;
         movementController.moveSpeed = Mathf.Max(key.MoveSpeed - KeyBunch.Instance.KeyCountInBunch * movementSpeedLossPerKey, minMovementSpeed);
         movementController.jumpHeight = Mathf.Max(key.JumpHeight - KeyBunch.Instance.KeyCountInBunch * jumpHeightLossPerKey, minJumpHeight);
+        movementController.fallingGravityMultiplier = key.FallingGravityMult;
+        movementController.timeToJumpApex = Mathf.Lerp(key.HalfTimeToJumpApex, key.FullTimeToJumpApex, (movementController.jumpHeight - (key.JumpHeight * 0.5f)) / (key.JumpHeight * 0.5f));
+
+        if(key.material==KeyType.KeyMaterial.Gold)
+        {
+            movementController.airJumpCount = 2;
+        }
+        else
+        {
+            movementController.airJumpCount = 0;
+        }
     }
 
     void RotateBasedOnEffort()

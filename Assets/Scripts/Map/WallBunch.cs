@@ -9,16 +9,15 @@ public class WallBunch : BunchBase
     public Material highlightMat = null;
     public const int MAX_KEYS = 5;
 
-    SpriteRenderer[] renderers;
+    public SpriteRenderer[] bunchRenderers;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         selectedKey = 0;
-        renderers = GetComponentsInChildren<SpriteRenderer>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         //Make sure it's the player
         if (!collision.gameObject.CompareTag("Player"))
@@ -32,7 +31,7 @@ public class WallBunch : BunchBase
         SetHighlight(true);
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    protected void OnTriggerExit2D(Collider2D collision)
     {
         //Make sure it's the player
         if (!collision.gameObject.CompareTag("Player"))
@@ -47,7 +46,7 @@ public class WallBunch : BunchBase
 
     public void SetHighlight(bool value)
     {
-        foreach(SpriteRenderer renderer in renderers)
+        foreach(SpriteRenderer renderer in bunchRenderers)
         {
             if (value)
                 renderer.material = highlightMat;
@@ -62,5 +61,7 @@ public class WallBunch : BunchBase
         keys.Clear();
 
         onBunchUpdated.Invoke();
+
+        AudioManager.PlaySound(2);
     }
 }

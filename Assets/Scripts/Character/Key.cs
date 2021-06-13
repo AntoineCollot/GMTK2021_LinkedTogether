@@ -10,6 +10,9 @@ public class Key : ScriptableObject
 
     public float MoveSpeed { get => KeyType.materials[material].moveSpeed; }
     public float JumpHeight { get => KeyType.materials[material].jumpHeight; }
+    public float FullTimeToJumpApex { get => KeyType.materials[material].fullTimeToJumpApex; }
+    public float HalfTimeToJumpApex { get => KeyType.materials[material].halfTimeToJumpApex; }
+    public float FallingGravityMult { get => KeyType.materials[material].fallingGravityMult; }
     public bool IsHeavy { get => KeyType.materials[material].isHeavy; }
     public Material Mat { get => KeyType.materials[material].mat; }
     public Sprite Sprite

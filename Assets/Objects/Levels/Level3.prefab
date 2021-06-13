@@ -5699,7 +5699,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1612363853992649597}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5734,7 +5734,7 @@ GameObject:
   - component: {fileID: 5412398096045279728}
   - component: {fileID: 1379090518415825603}
   - component: {fileID: 4741780364609104664}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5776,6 +5776,9 @@ MonoBehaviour:
       m_Calls: []
   idleMat: {fileID: 2100000, guid: ce53feb2e6233a042b1eec87654ac1f5, type: 2}
   highlightMat: {fileID: 2100000, guid: bb2f34dd576124b43bbb23c078e6bdae, type: 2}
+  bunchRenderers:
+  - {fileID: 9174508805025555275}
+  - {fileID: 5723684525196817904}
 --- !u!50 &1379090518415825603
 Rigidbody2D:
   serializedVersion: 4
@@ -8286,7 +8289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4954958336100535028}
   - component: {fileID: 5723684525196817904}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9251,6 +9254,10 @@ MonoBehaviour:
   - {fileID: 5775549647511798389, guid: 4f30b561cdf961848a6bc0087f668cad, type: 3}
   - {fileID: 5829366124417739753, guid: 954412f430e41da429f8a5e491432d14, type: 3}
   doorParent: {fileID: 4896530182635174857}
+  leverBunchPrefab: {fileID: 0}
+  otherParent: {fileID: 0}
+  obstaclePrefab: {fileID: 0}
+  furniturePrefab: {fileID: 0}
   blockLibrary:
   - {fileID: 21300000, guid: 5f9d1c89b8143f24f88f6b309cd74a83, type: 3}
   - {fileID: 21300000, guid: 08fa00e3dd52c3e43be83d38c269195c, type: 3}
@@ -15444,7 +15451,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 745467517986988099}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18415,7 +18422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5320623342619994277}
   - component: {fileID: 6679022830884244610}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18715,7 +18722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6420631662688717417}
   - component: {fileID: 7995749691297038532}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19017,7 +19024,7 @@ GameObject:
   - component: {fileID: 481024354753614154}
   - component: {fileID: 7107290282462196227}
   - component: {fileID: 1753109497767552907}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19059,6 +19066,9 @@ MonoBehaviour:
       m_Calls: []
   idleMat: {fileID: 2100000, guid: ce53feb2e6233a042b1eec87654ac1f5, type: 2}
   highlightMat: {fileID: 2100000, guid: bb2f34dd576124b43bbb23c078e6bdae, type: 2}
+  bunchRenderers:
+  - {fileID: 7995749691297038532}
+  - {fileID: 6679022830884244610}
 --- !u!50 &7107290282462196227
 Rigidbody2D:
   serializedVersion: 4
@@ -19404,7 +19414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3298658923262703893}
   - component: {fileID: 9174508805025555275}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallBunch F
   m_TagString: Untagged
   m_Icon: {fileID: 0}

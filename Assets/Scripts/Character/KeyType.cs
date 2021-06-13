@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class KeyType : MonoBehaviour
 {
-    public enum KeyMaterial { Iron, CastIron, Charged, Heart }
+    public enum KeyMaterial { Iron, CastIron, Gold, Heart }
     [System.Serializable] public struct KeyMaterialPropreties
     {
         public float moveSpeed;
         public float jumpHeight;
+        public float fullTimeToJumpApex;
+        public float halfTimeToJumpApex;
+        public float fallingGravityMult;
         public bool isHeavy;
 
         [Header("Colors")]

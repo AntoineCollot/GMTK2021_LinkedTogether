@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Linq;
 
 public class KeyBunch : BunchBase
 {
@@ -20,6 +21,7 @@ public class KeyBunch : BunchBase
     public int CurrentKeyLength { get => keys[selectedKey].length; }
     public Key CurrentKey { get => keys[selectedKey]; }
     public int KeyCountInBunch { get => keys.Count - 1; }
+    public bool HasHeartKey { get => keys.Any(k=>k.material==KeyType.KeyMaterial.Heart); }
 
     private void Awake()
     {
@@ -91,5 +93,6 @@ public class KeyBunch : BunchBase
         onBunchUpdated.Invoke();
 
         anim.SetTrigger("Switch");
+        AudioManager.PlaySound(3);
     }
 }

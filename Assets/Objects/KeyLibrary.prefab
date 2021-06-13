@@ -48,6 +48,9 @@ MonoBehaviour:
     properties:
       moveSpeed: 3
       jumpHeight: 3.1
+      fullTimeToJumpApex: 0.95
+      halfTimeToJumpApex: 0.8
+      fallingGravityMult: 1.8
       isHeavy: 0
       mat: {fileID: 2100000, guid: fc898d2bdce0831408a04d0b764e4ae3, type: 2}
       sprite1: {fileID: 21300000, guid: b37ebabb56c932c4288ca1855fa932c7, type: 3}
@@ -57,17 +60,11 @@ MonoBehaviour:
     properties:
       moveSpeed: 2
       jumpHeight: 1.1
+      fullTimeToJumpApex: 0.5
+      halfTimeToJumpApex: 0.5
+      fallingGravityMult: 2
       isHeavy: 1
       mat: {fileID: 2100000, guid: 04f0b4943b405dc479d1ad1c832092fb, type: 2}
-      sprite1: {fileID: 21300000, guid: b37ebabb56c932c4288ca1855fa932c7, type: 3}
-      sprite2: {fileID: 21300000, guid: 7555cb4d32225fb43a462e2b8ee4436d, type: 3}
-      sprite3: {fileID: 21300000, guid: 6f3636c8b2ff01141bb2f4f06e95aed4, type: 3}
-  - material: 2
-    properties:
-      moveSpeed: 3
-      jumpHeight: 3.1
-      isHeavy: 0
-      mat: {fileID: 2100000, guid: 52443747d25455c4583d0c7e7c8c9c34, type: 2}
       sprite1: {fileID: 21300000, guid: b37ebabb56c932c4288ca1855fa932c7, type: 3}
       sprite2: {fileID: 21300000, guid: 7555cb4d32225fb43a462e2b8ee4436d, type: 3}
       sprite3: {fileID: 21300000, guid: 6f3636c8b2ff01141bb2f4f06e95aed4, type: 3}
@@ -75,8 +72,23 @@ MonoBehaviour:
     properties:
       moveSpeed: 2
       jumpHeight: 1.6
+      fullTimeToJumpApex: 0.8
+      halfTimeToJumpApex: 0.7
+      fallingGravityMult: 1.8
       isHeavy: 0
       mat: {fileID: 2100000, guid: fc898d2bdce0831408a04d0b764e4ae3, type: 2}
       sprite1: {fileID: 21300000, guid: 3354b18c42d19644ab2b48599844fd45, type: 3}
       sprite2: {fileID: 21300000, guid: 3354b18c42d19644ab2b48599844fd45, type: 3}
       sprite3: {fileID: 21300000, guid: 3354b18c42d19644ab2b48599844fd45, type: 3}
+  - material: 2
+    properties:
+      moveSpeed: 4
+      jumpHeight: 3.1
+      fullTimeToJumpApex: 0.95
+      halfTimeToJumpApex: 0.8
+      fallingGravityMult: 1.8
+      isHeavy: 0
+      mat: {fileID: 2100000, guid: 9cb74c8e701e4124abc1b50afd9e58f8, type: 2}
+      sprite1: {fileID: 21300000, guid: b37ebabb56c932c4288ca1855fa932c7, type: 3}
+      sprite2: {fileID: 21300000, guid: 7555cb4d32225fb43a462e2b8ee4436d, type: 3}
+      sprite3: {fileID: 21300000, guid: 6f3636c8b2ff01141bb2f4f06e95aed4, type: 3}

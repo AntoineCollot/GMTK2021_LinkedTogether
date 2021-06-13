@@ -251,6 +251,8 @@ public class CharacterMovementController : MonoBehaviour
 
     public void ForceJump()
     {
+        AudioManager.PlaySound(1);
+
         anim.SetTrigger("Jump");
 
         //Don't allow to be grounded for a few frames after jumping

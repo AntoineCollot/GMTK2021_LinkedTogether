@@ -16,6 +16,11 @@ public class MapBuilder : MonoBehaviour
     public Door[] doorPrefabs;
     public Transform doorParent;
 
+    public LeverBunch leverBunchPrefab;
+    public Transform otherParent;
+    public Transform obstaclePrefab;
+    public Transform furniturePrefab;
+
     Camera cam;
 
     [Header("Blocks")]
@@ -96,6 +101,21 @@ public class MapBuilder : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             CreateWallBunch();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            Vector2Int coords = GetMouseCoords();
+            Instantiate(leverBunchPrefab, new Vector3(coords.x, coords.y), Quaternion.identity, wallBunchParent);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            Vector2Int coords = GetMouseCoords();
+            Instantiate(obstaclePrefab, new Vector3(coords.x, coords.y), Quaternion.identity, otherParent);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            Vector2Int coords = GetMouseCoords();
+            Instantiate(furniturePrefab, new Vector3(coords.x, coords.y), Quaternion.identity, otherParent);
         }
     }
 
