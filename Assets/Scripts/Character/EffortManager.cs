@@ -5,12 +5,12 @@ using UnityEngine;
 public class EffortManager : MonoBehaviour
 {
     [Header("Movement")]
-    float movementSpeedLossPerKey = 0.5f;
-    float minMovementSpeed = 1f;
+    public float movementSpeedLossPerKey = 0.5f;
+    public float minMovementSpeed = 1f;
 
     [Header("Jump")]
-    float jumpHeightLossPerKey = 0.5f;
-    float minJumpHeight = 1f;
+    public float jumpHeightLossPerKey = 0.5f;
+    public float minJumpHeight = 1.1f;
 
     [Header("Effort")]
     public int effortKeyCount = 3;

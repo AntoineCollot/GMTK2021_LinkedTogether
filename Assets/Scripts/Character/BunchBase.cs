@@ -9,7 +9,6 @@ public abstract class BunchBase : MonoBehaviour
     public List<Key> keys = new List<Key>();
     //only user by player bunch but easier to but it there
     protected int selectedKey = 0;
-    public const int MAX_KEYS = 3;
     public UnityEvent onBunchUpdated = new UnityEvent();
 
     public Key GetKeyAtPosition(int keyPosition)

@@ -39,7 +39,7 @@ public class KeyBunch : BunchBase
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnSwitchUpButton()
@@ -48,11 +48,6 @@ public class KeyBunch : BunchBase
     }
 
     void OnSwitchDownButton()
-    {
-        Switch(-1);
-    }
-
-    void Switch(int dir)
     {
         //Allow switch when grounded
         if (!movementController.isGrounded)
@@ -63,22 +58,29 @@ public class KeyBunch : BunchBase
             return;
 
         //If in contact with a wallBunch, leave the ex-selected key there
-        if (contactWallBunch != null && contactWallBunch.keys.Count<WallBunch.MAX_KEYS)
+        if (contactWallBunch != null && contactWallBunch.keys.Count < WallBunch.MAX_KEYS)
         {
             //Add the key to the wallbunch
             contactWallBunch.AddKey(keys[selectedKey]);
 
             keys.RemoveAt(selectedKey);
 
-            //Only change id if going back, since otherwise the id is now the one of the next key
-            if (dir < 0 && keys.Count>1)
-                selectedKey--;
+            Switch(-1,true);
         }
-        else
-        {
-            //Change id
-            selectedKey += dir;
-        }
+    }
+
+    void Switch(int dir, bool forceSwitch = false)
+    {
+        //Allow switch when grounded
+        if (!movementController.isGrounded)
+            return;
+
+        //Make sure there are enough keys
+        if (!forceSwitch && keys.Count < 2)
+            return;
+
+        //Change id
+        selectedKey += dir;
 
         //Loop ids
         if (selectedKey < 0)

@@ -7,6 +7,7 @@ public class WallBunch : BunchBase
 {
     public Material idleMat = null;
     public Material highlightMat = null;
+    public const int MAX_KEYS = 5;
 
     SpriteRenderer[] renderers;
 
