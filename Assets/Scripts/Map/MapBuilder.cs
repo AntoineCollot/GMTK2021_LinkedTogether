@@ -5,6 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class MapBuilder : MonoBehaviour
 {
+#if UNITY_EDITOR
     public int cellSize = 1;
     const int MAP_LAYER = 8;
     public LayerMask mapMask = 1 << MAP_LAYER;
@@ -249,6 +250,7 @@ public class MapBuilder : MonoBehaviour
         print(gameObject.name+" : Activated " + count + " key objects");
     }
 
+
     private void OnDrawGizmos()
     {
         Color col = new Color(1, 1, 1, 0.05f);
@@ -257,10 +259,5 @@ public class MapBuilder : MonoBehaviour
         Vector3 pos = new Vector3(coords.x, coords.y, 0);
         Gizmos.DrawWireCube(pos, Vector3.one * cellSize);
     }
-
-    private void OnGUI()
-    {
-        //Hack to force update
-        transform.position += Vector3.zero;
-    }
+#endif
 }

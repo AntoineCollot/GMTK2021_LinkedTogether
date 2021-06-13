@@ -12,11 +12,13 @@ public class Eyes : MonoBehaviour
     public int blinkAnimFramerate = 10;
     float nextBlindTime;
     int animId = 0;
+    bool wasDoingEffort = false;
 
     [Header("Position")]
     public Vector2 position1;
     public Vector2 position2;
     public Vector2 position3;
+    public Vector2 positionHeart;
 
     new SpriteRenderer renderer;
     EffortManager effort;
@@ -39,9 +41,15 @@ public class Eyes : MonoBehaviour
             StopAllCoroutines();
             //effort is sprite 3
             renderer.sprite = sprites[3];
+            wasDoingEffort = true;
         }
         else
         {
+            if (wasDoingEffort)
+            {
+                animId = 0;
+                wasDoingEffort = false;
+            }
             if (Time.time > nextBlindTime)
             {
                 nextBlindTime = Time.time + Random.Range(minBlinkinterval, maxBlinkinterval);
@@ -69,6 +77,12 @@ public class Eyes : MonoBehaviour
 
     void UpdatePosition()
     {
+        if(KeyBunch.Instance.CurrentKey.material ==KeyType.KeyMaterial.Heart)
+        {
+            transform.localPosition = positionHeart;
+            return;
+        }
+
         switch (KeyBunch.Instance.CurrentKeyLength)
         {
             case 1:

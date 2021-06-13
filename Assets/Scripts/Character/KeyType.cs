@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KeyType : MonoBehaviour
 {
-    public enum KeyMaterial { Iron, CastIron, Charged }
+    public enum KeyMaterial { Iron, CastIron, Charged, Heart }
     [System.Serializable] public struct KeyMaterialPropreties
     {
         public float moveSpeed;
